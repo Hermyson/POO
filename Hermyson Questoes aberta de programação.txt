@@ -1,0 +1,87 @@
+cap8.questao8_2
+
+Se nenhum modificador de acesso for especificado para um método ou uma variável é declarado em uma classe, o método ou variável  é considerado como tendo acesso de pacote. Não existe aspectos negativo pois foi desenvolvida para ser usada em algum momento.
+
+cap8.questao8_3
+
+Da erro, em tempo de compilação o construtor é um tipo de método (em bytecode). Por isso não podemos assinar como void ou qualquer valor, somente retornar a própria classe.
+
+cap9.questao9_4
+
+Herança é uma forma de retulização de softwares em que nova classe é criada absorvendo membros de uma classe exixtentes e aprimorada com capacidades novas ou modificadas.Com a herança, você pode economizar tempo durante o desenvolvimento de um programa baseando novas classes no software existente.
+
+cap9.questao9_7
+
+Os metodos private de uma superclasse só podem ser acessados por subclasses por
+metodos public ou protected herdados.Enquanto os metodos protected de uma  superclasse podem ser acessados por suas subclasses e outras classes no mesmo pacote.
+
+cap9.questao9_9
+
+a) Invocar o método earnings() da superclasse;
+b) Avisa ao compilador que aquele método está sobrescrever um método da superclasse;
+c) Esta referenciando um construtor da superclasse.
+
+cap9.questao9_11
+
+É usado para invocar o construtor da superclasse. 
+
+cap9.questao9_12
+
+É usado para invocar os métodos que herda as propriedades da superclasse, uma instância de uma subclasse é tambem uma instância da superclasse.
+
+cap9.questao9_13
+
+Os beneficios de utilizar métodos get da classe e para obter os valores de suas variáveis de instância. Se decidirmos alterar os nomes de variável de instância, as declarações earnings e toString não exigirão modificação, somente os corpos dos métodos get e set que manipulam diretamente as variáveis de instância precisarão mudar. Essas alterações ocorrem exclusivamente dentro da superclasse, nenhuma alteração é necessária na subclasse. Localizar os efeitos de alterações como essa é uma boa prática de engenharia de software.
+
+cap10.questao10_4
+
+O polimorfismo permite escrever programas que processam objetos que compartilham a mesma superclasse como se todas fossem objetos da superclasse; isso pode simplificar a programação.
+
+cap10.questao10_5
+
+É o método de uma classe abstrata que não possui implementação. A classe abstrata servem para moldar uma estrutura comum para entidades(classes) de um programa que compatilham algumas caracteristicas.
+
+cap10.questao10_6
+
+O software que invoca o comportamento polimórfico é indepedente dos tipos de objeto para os quais as mensagens são enviadas. Novos tipos de objetos que podem responder a chamadas de método existenyes podem ser incorporados a um sistema sem exigir modificações no sistema básico.
+
+cap10.questao10_7
+
+*Atribuir uma referência de superclasse a uma variável de superclasse é simples e direto.
+*Atribuir uma referência de subclasse a uma variável de subclasse é simples e direto.
+*Atribuir uma referência de subclasse a uma variável de superclasse é seguro por causa do relacionamento é um. Referenciar membros exclusivos de subclasses por meio de variáveis de superclasse é um erro de compilação.
+
+cap10.questao10_8
+
+Uma interfaçe é um conjunto de métodos públicos, sem implementação,que deverão ser implementados pela classe que utiliza essa interface.Uma interface não pode ser instanciada.Uma classe pode implementar diversas interfaces diferentes.Já a classe abstrata não pode ser instanciada,só herdada.Possui métodos abstratos e/ ou métodos implementados.
+Utilizar uma classe abstrata não precisa ser inteiramente abstrata também pode conter outros métodos não abstrato isso deve deixar o processo mais rapido.Utilizar interface porque qualquer classe pode implementa-la mesmo se estender há  uma superclasse completamente não-relacionada.
+
+cap10.questao10_9
+
+Os métodos default do Java SE 8 permitem expandir as interfaces existentes adicionando novos métodos a essas interfaces sem quebrar o código que as usa.
+
+cap10.questao10_10
+
+É uma interface que contém apenas um método abstrato, como éo caso de Runnable. Este tipo de interface é usado em situações específicas, sendo comum a instanciação é através de uma classe anônima. 
+
+cap10.questao10_11
+
+Não pode. Faz paret da especificação da linguagem. Métodos estáticos são métodos pertencentes à classe e não à instância da classe (ao objeto).
+
+cap11.questao11_14
+
+Exception in thread "main" java.util.InputMismatchException
+Exception: java.lang.ArithmeticException: / by zero*
+Exception handled in main Method doesNotThrowException
+Exception handled in method throwException
+Exception thrown in method3
+Exception in thread "main" java.lang.AssertionError
+ArrayIndexOutOfBoundsException
+StringIndexOutOfBoundsException
+
+cap11.questao11_15
+
+As exceções são eficaz pois evita que valores invalidos que tentou passar em tempo de compilação. 
+
+
+
