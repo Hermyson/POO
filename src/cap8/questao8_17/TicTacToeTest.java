@@ -21,28 +21,44 @@ public class TicTacToeTest {
 		int linha = 0;
 		int coluna = 0;
 
+		boolean jogadaInvalida = false;
 		while (continuar) {
-			System.out.print("Jogada do X. Informe linha: ");
-			linha = scan.nextInt();
+			do {
+				System.out.print("Jogada do X. Informe linha: ");
+				linha = scan.nextInt();
 
-			System.out.print("Jogada do X. Informe coluna: ");
-			coluna = scan.nextInt();
+				System.out.print("Jogada do X. Informe coluna: ");
+				coluna = scan.nextInt();
 
-			tabuleiro.setCell(linha, coluna, Cell.X);
+				if (tabuleiro.posicaoVazia(linha, coluna)) {
+					tabuleiro.setCell(linha, coluna, Cell.X);
+					jogadaInvalida = false;
+				} else {
+					System.out.print("Jogada invalida. Tente novamente.");
+					jogadaInvalida = true;
+				}
+			} while (jogadaInvalida);
 
 			System.out.println(tabuleiro.toString());
 			if (tabuleiro.checaLinhas() && houveVencedor || tabuleiro.checaColunas() && houveVencedor
 					|| tabuleiro.checaDiagonais() && houveVencedor) {
 				houveVencedor = true;
 			}
+			do {
+				System.out.print("Jogada do O. Informe linha: ");
+				linha = scan.nextInt();
 
-			System.out.print("Jogada do O. Informe linha: ");
-			linha = scan.nextInt();
-
-			System.out.print("Jogada do O. Informe coluna: ");
-			coluna = scan.nextInt();
-
-			tabuleiro.setCell(linha, coluna, Cell.O);
+				System.out.print("Jogada do O. Informe coluna: ");
+				coluna = scan.nextInt();
+				
+				if (tabuleiro.posicaoVazia(linha, coluna)) {
+					tabuleiro.setCell(linha, coluna, Cell.O);
+					jogadaInvalida = false;
+				} else {
+					System.out.print("Jogada invalida. Tente novamente.");
+					jogadaInvalida = true;
+				}
+			} while (jogadaInvalida);
 
 			System.out.println(tabuleiro.toString());
 			if (tabuleiro.checaLinhas() && houveVencedor || tabuleiro.checaColunas() && houveVencedor

@@ -69,5 +69,9 @@ public class TicTacToe {
 
 		tabuleiro[row][col] = value;
 	}
+	
+	public boolean posicaoVazia(int linha, int coluna) {
+		return tabuleiro[linha][coluna] == Cell.E;
+	}
 
 }
